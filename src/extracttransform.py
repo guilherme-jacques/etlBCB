@@ -1,8 +1,5 @@
 import requests
 import pandas as pd #importa o pandas com pd
-url= "https://olinda.bcb.gov.br/olinda/servico/MPV_DadosAbertos/versao/v1/odata/MeiosdePagamentosTrimestralDA(trimestre=@trimestre)?@trimestre='20191'&$format=json"
-req = requests.get(url)
-print(req.status_code)
 
 
 def requestApiBcb(data: str)-> pd.DataFrame:
@@ -26,8 +23,5 @@ def requestApiBcb(data: str)-> pd.DataFrame:
     df['datatrimestre'] = pd.to_datetime(df['datatrimestre'])
     return (df)
 
-
-dadosBcb = requestApiBcb('20191')
-print (dadosBcb.info())
 
 
