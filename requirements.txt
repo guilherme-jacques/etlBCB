@@ -3,3 +3,8 @@ pandas
 pymsql
 sqlalchemy
 black
+matplotlib
+scikit-learn
+seaborn
+prophet
+plotyl
